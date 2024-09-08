@@ -3,9 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+
     <title>Document</title>
+    <link rel="stylesheet" href="./dist/styles.css">
 </head>
 <body>
+    <div class="wrapper">
+        <div class="content flex flex-col gap-y-6 justify-center items-center mt-80 ">
+            <div>
+                <h3>password GENERATOR</h3>
+            </div>
     
+            <div>
+                <input readonly  data-displayPassword placeholder="password"> 
+                <button id="clipboardbttn" > <i class="ri-file-copy-line text-xl "></i> </button>
+            </div>
+    
+            <div class="maincontent">
+
+                <div class="slidecontainer flex gap-x-4">
+                    <input type="range" min="1" max="20" step="1" class="slider" value="10">
+
+                    <p data-sliderVal> 10  </p>
+                  </div>
+    
+                <div data-checkedlist class="flex  flex-col">
+    
+                    <div class=" check  flex gap-x-3"> <input type="checkbox" checked id="uppercase" > <p>uppercase</p> </div>
+                    <div class=" check  flex gap-x-3"><input type="checkbox"  id="lowercase"> <label for="lowercase"> lower</label> </div>
+                    <div class=" check  flex gap-x-3"> <input type="checkbox" id="numbers">   <label for="numbers"> no </label></div>
+                    <div class=" check  flex gap-x-3"> <input type="checkbox" id="symbols">   <label for="symbols"> sym</label></div>
+    
+                </div>
+    
+    
+    
+            </div>
+
+            <div class="flex justify-between relative items-center gap-x-12"> 
+                <div>strength</div>
+                <!-- color of strength ness -->
+                 <div class="color rounded-full w-4 h-2"></div>
+            </div>
+
+            <button class="hover:cursor-pointer bg-blue-500" data-genPassBttn >generate password</button>
+
+
+        </div>
+
+
+    </div>
+
+
+    <script src="./scipts.js"></script>
 </body>
 </html>
